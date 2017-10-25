@@ -1,15 +1,15 @@
 {
-  "name": "smartrockets",
+  "name": "tssmartrockets",
   "version": "1.0.0",
-  "description": "Smart Rockets (genetic algorithm) in js using p5",
+  "description": "Smart Rockets (genetic algorithm) in ts using p5",
   "main": "sketch.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"build": "browserify sketch.js -o bundle.js"
+  	"build": "echo \"Error: no build specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Liamjen/jsSmartRockets.git"
+    "url": "git+https://github.com/Liamjen/tsSmartRockets.git"
   },
   "author": "",
   "license": "ISC",

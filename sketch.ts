@@ -1,14 +1,14 @@
-var Population = require("./Population.js");
-var Goal = require("./Goal.js");
-var p5 = require("./p5/p5.js");
+import Population from "./Population"
+import Goal from "./Goal"
+import * as p5 from "./p5/p5.js"
 
-var population;
-var rocketNum = 20;
-var screenSize = 900;
-var goal;
+let population: Population;
+let rocketNum: number = 20;
+let screenSize: number = 900;
+let goal: Goal;
 
 var p5functions = function(p5obj)
-{
+{    
     p5obj.setup = function()
     {
         p5obj.createCanvas(screenSize, screenSize);
@@ -32,5 +32,4 @@ var p5functions = function(p5obj)
     }
 }
 
-var myp5 = new p5(p5functions);
-window.myp5 = myp5;
+let myp5 = new p5(p5functions);

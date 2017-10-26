@@ -1,6 +1,13 @@
-class Goal
+export default class Goal
 {
-    constructor(x, y, size, p5obj)
+    private x: number;
+    private y: number;
+    private size: number;
+
+    private pos: any;
+    private p5obj: any;
+
+    constructor(x: number, y: number, size: number, p5obj: any)
     {
         this.x = x;
         this.y = y;
@@ -16,6 +23,9 @@ class Goal
     {
         this.p5obj.rect(this.x, this.y, this.size, this.size);
     }
-}
 
-module.exports = Goal;
+    getPos()
+    {
+        return this.pos;
+    }
+}

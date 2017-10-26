@@ -5,7 +5,7 @@
   "main": "sketch.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-  	"build": "echo \"Error: no build specified\" && exit 1"
+    "build": "node_modules/.bin/webpack"
   },
   "repository": {
     "type": "git",
@@ -14,7 +14,10 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Liamjen/jsSmartRockets/issues"
+    "url": "https://github.com/Liamjen/tsSmartRockets/issues"
   },
-  "homepage": "https://github.com/Liamjen/jsSmartRockets#readme"
+  "homepage": "https://github.com/Liamjen/tsSmartRockets#readme",
+  "devDependencies": {
+    "webpack": "^3.8.1"
+  }
 }

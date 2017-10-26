@@ -1,8 +1,16 @@
-var mutateChance = 0.05;
+import * as p5 from "./p5/p5.js";
 
-class DNA
+export default class DNA
 {
-    constructor(length, strength, p5obj)
+    private mutateChance: number = 0.05;
+
+    private dna: any[];
+    private length: number;
+    private strength: number;
+
+    private p5obj: any;
+
+    constructor(length: number, strength: number, p5obj: any)
     {
         this.dna = [];
         this.length = length;
@@ -17,7 +25,17 @@ class DNA
         }
     }
 
-    splice(otherDNA)
+    getDNA()
+    {
+        return this.dna;
+    }
+
+    setDNA(dna: any[])
+    {
+        this.dna = dna;
+    }
+
+    splice(otherDNA: DNA)
     {
         for(var i = 0; i < this.length; i++)
         {
@@ -34,7 +52,7 @@ class DNA
     {
         for(var i = 0; i < this.length; i++)
         {
-            if(Math.random() < mutateChance)
+            if(Math.random() < this.mutateChance)
             {
                 this.dna[i] = p5.Vector.random2D();
                 this.dna[i].setMag(this.strength);
@@ -42,5 +60,3 @@ class DNA
         }
     }
 }
-
-module.exports = DNA;
